@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  background: #edf0f1;
+  margin: 0 auto;
+}
+
+
+.app-header {
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  position: fixed;
+  left:0;
+  top:0;
+  background: #25b99a;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 1px 4px 4px rgba(44,62,80,0.15);
+  z-index: 5
+}
+
+.app-input {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 20px;
+  padding: 0 60px 0 0;
+  float: left;
+  background: rgba(255,255,255, 0.2);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 0;
+  box-shadow: none;
+  color: #fff;
+  outline: none;
+}
+
+.app-input::placeholder {
+  color: #fff;
+}
+
+.add {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  border: 0;
+  z-index: 2;
+  background: #fff;
+  outline: none;
+  color: #e0e3e4;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+.container {
+  width: 100%;
+  float: left;
+  padding: 95px 15px 15px;
+}
+
+.todo {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ width: 100%;
+ float: left;
+}
+
+.todo li {
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  line-height: 22px;
+  min-height: 50px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 2px rgba(44,62,80,0.10);
+  margin-bottom: 10px;
+  position: relative;
+  padding: 14px 100px 14px 14px;
+}
+
+.todo li:last-of-type {
+  margin: 0;
+}
+
+.buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  float: left;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #adb1b3;
+}
+
+.btn:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.remove:hover {
+  color:#e85656;
+  transition: 0.7s;
+}
+
+
+
+#uncompleted .complete:hover {
+  color: #25b99a;
+  transition: 0.7s;
+}
+
+#completed .complete {
+  color: #25b99a;
+}
+
+.icon {
+width: 25px;
+height: 25px;
+}
+
+
+#completed {
+  padding: 60px 0 0 0;
+  position: relative;
+}
+
+
+#completed:before {
+width: 150px;
+height: 1px;
+background: #d8e5e0;
+position: absolute;
+content: '';
+top: 30px;
+left: 50%;
+margin: 0 0 0 -75px;
+}
+
+
+#completed:empty:after {
+  content: "You don't have any completed tasks";
+}
+
+#uncompleted:empty:after {
+  content: "You don't have any tasks";
+  margin-top: 20px;
+}
+
+#completed:after, #uncompleted:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color:#aaa;
+}
+
